@@ -1,3 +1,13 @@
+## 📜 Tech Blog
+
+* [Notion](https://www.notion.so/1b6da3e4cb96493494fd2d21e43ccb58)
+* [Velog](https://velog.io/@kjh03160)
+* [Tistory](https://juna-dev.tistory.com/)
+---
+위에 가서 보는걸 추천드려용
+---
+---
+
 DB 인덱스에 관해서 알아보고자 한다. 인덱스를 보기 전에 DB에서는 어떻게 데이터를 저장하고 관리하는지 간단히 먼저 살펴보고자 한다.
 
 ## Data 저장 구조
