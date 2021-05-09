@@ -142,7 +142,7 @@ URL의 마지막 구성 요소이다. query는 URL에서 추가적인 데이터�
 
 ## HTTPS
 
-HTTPS는 `HyperText Transfer Protocol oer Secure Socket Layer`의 줄임말로, 주로 사용하는 HTTP의 보안 버전이다.
+HTTPS는 `HyperText Transfer Protocol over Secure Socket Layer`의 줄임말로, 주로 사용하는 HTTP의 보안 버전이다.
 
 ### HTTPS는 왜 등장했을까?
 
