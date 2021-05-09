@@ -18,7 +18,7 @@
 2. B -> A : 잘 들려. 내 말은 들려?
 3. A -> B : 잘 들려!
 
-<img src="/Users/pro/Library/Application Support/typora-user-images/스크린샷 2021-05-08 오후 10.49.13.png" alt="스크린샷 2021-05-08 오후 10.49.13" style="zoom:50%;" />
+<img src="/assets/img/network/tcp_ip_3way_4way_1.png" alt="스크린샷 2021-05-08 오후 10.49.13" style="zoom:50%;" />
 
 SYN = synchronize sequence numbers : 연결 확인을 위해 무작위의 숫자를 보냄 (내 말 잘 들려?)
 
