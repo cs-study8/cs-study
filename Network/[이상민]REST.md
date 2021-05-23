@@ -203,15 +203,79 @@ HTML은 a태그로 하이퍼링크를 통해 다음 상태로 전이될 수 있�
 - **방법 1. Media Type**
   - Media type을 정의하고 문서를 작성한다
   - IANA에 미디어 타입을 등록한다
+  
+```
+HTTP/1.1 200 OK
+Content-Type: application/vnd.todos+json
+
+[
+    {"id": 1, "title": "회사 가기"},
+    {"id": 2, "title": "집에 가기"}
+]
+
+```
 
 - **방법 2. Profile**
   - 명세를 작성하고 Link 헤더에 profile relation으로 링크한다 
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Link: <https://example.org/docs/todos>; rel="profile"
+
+[
+    {"id": 1, "title": "회사 가기"},
+    {"id": 2, "title": "집에 가기"}
+]
+```
 
 ### HATEOAS
 
 - **방법 1. data**
-  - json 데이터 내에 하이퍼링크를 추가한다
+  - 다양한 방법으로 json 데이터 내에 하이퍼링크를 추가한다
+
+예1)
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Link: <https://example.org/docs/todos>; rel="profile"
+
+[
+  {
+    "link": "https://example.org/todos/1",
+    "title": "회사 가기"
+  },
+  {
+    "link": "https://example.org/todos/2",
+    "title": "집에 가기"
+  }
+]
+```
+예2)
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Link: <https://example.org/docs/todos>; rel="profile"
+
+{
+  "links": {
+    "todo": "https://example.org/todos/{id}"
+  },
+  "data": [{
+    "id": 1,
+    "title": "회사 가기"
+  }, {
+    "id": 2,
+    "title": "집에 가기"
+  }]
+}
+```
+
 
 - **방법 2. HTTP 헤더**
   - Link, Location 등의 헤더로 링크를 표현한다
+```
+HTTP/1.1 204 No Content
+Location: /todos/1
+Link: </todos/>; rel="collection"
+```
 
